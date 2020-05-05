@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #3A3531;
+    font-family: 'Miriam Libre', sans-serif;
+}
+.header-bar {
+    height: 10vh;
+    align-items: center;
+    display: flex;
+}
+.header-bar h1 {
+    z-index: 1;
+    height: 8vh;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 .6em .6em 0;
+    position: absolute;
+    background-color: #EE6969;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+    left: 0;
+    top: 0;
+    margin: 4vh 0 0 0;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+}
+.rounded-image {
+    height: 10vh;
+    width: 10vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 3vh;
+    background-color: black;
+    border-radius: 50%;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    
+}
+.rounded-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    border-radius: 50%;
+}
+
+.history {
+    color: white;
+    height: 40vh;
+    position: absolute;
+    top: 10vh;
+    padding: 10% 5% 3% 22%;
+}
+
+.history h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 15px;
+}
+
+.main-map {
+    height: 50vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.map {
+    height: 100%;
+    width: 100%;
+}
+
+.main-map img {
+    width: 100%;
+    height: 100%;
+}
+.aguayo {
+    width:3vh;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 3vh;
+}
+
+.aguayo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.left-nav {
+    width:18%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.left-nav ul{
+    height: fit-content;
+    width: 100%;
+    list-style: none;
+    justify-content: left;
+    text-align: left;
+}
+.left-nav ul li {
+    width: 100%;
+    justify-content: left;
+    text-align: left;
+}
+.left-nav ul a {
+    display: flex;
+    font-size: 3vw;
+    height: 8vh;
+    text-align: center;
+    margin-top: 13vh;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 0 .6em .6em 0;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/css/ol.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yana App</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/build/ol.js"></script>
+    
+</head>
+<body>
+    <header class="header-bar">
+        <h1>Yana App</h1>
+        <div class="rounded-image">
+            <img src="images/seño.jpg" alt="señora">
+        </div>
+    </header>
+
+    <article class="history">
+        <h3>HOLA! SOY MARTHA</h3>
+        <p>Necesito tu ayuda. Tengo 3 hijos y vivo en la calle A, distrito B. Estos últimos días han sido muy tristes, mi única forma de ingreso ha sido afectada por la crisis. Me encuentro casi sin haber comido y pido su solidaridad para brindarme una bolsa de arroz y quizá algo de fideo. GRACIAS!</p>
+    </article>
+
+    <section class="main-map" >
+        
+    
+        <div id="map" class="map"></div>
+        <!-- <img src="images/maps.png" alt="mapa"> -->
+    </section>
+
+    <aside class="aguayo">
+        <img src="images/aguayo.jpg" alt="aguayo">
+    </aside>
+
+    <nav class="left-nav">
+        <ul>
+            <li><a href="#" style="background-color: #56E1D9; color: #1D4846;">VER</a></li>
+            <li><a href="#" style="background-color: #56E19F; color: #123122;">PEDIR</a> </li>
+            <li><a href="#" style="background-color: #FF7664; color: white;">HISTORIAS</a> </li>
+            <li><a href="#" style="background-color: #9C70FB; color: white;">ABOUT</a></li>
+        </ul>
+    </nav>
+
+    <script type="text/javascript">
+
+        var map = new ol.Map({
+          target: 'map',
+          layers: [
+            new ol.layer.Tile({
+              source: new ol.source.OSM()
+            })
+          ],
+          view: new ol.View({
+            center: ol.proj.fromLonLat([-68.09748, -16.52734]),
+            zoom: 18
+          })
+        });
+  
+        var pos = ol.proj.fromLonLat([-68.09748, -16.52734]);
+  
+        var element = document.createElement('div');
+                      element.innerHTML = '<img src="https://cdn.mapmarker.io/api/v1/fa/stack?size=50&color=DC4C3F&icon=fa-microchip&hoffset=1" />';
+        var marker = new ol.Overlay({
+                          position: pos,
+                          positioning: 'center-center',
+                          element: element,
+                          stopEvent: false
+                      });
+          map.addOverlay(marker);
+      </script>
+</body>
+</html>
